@@ -1,4 +1,6 @@
 // API USADA para validação dos Cenários de Testes - https://jsonplaceholder.typicode.com/,
+// Método utilizado GET --> https://jsonplaceholder.typicode.com/posts
+// Postan
 
 // Valida se o status da response é 200 Teste Positivo
 pm.test("Status code is 200", function () {
