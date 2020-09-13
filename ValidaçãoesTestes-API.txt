@@ -1,4 +1,4 @@
-// API USADA para validação  https://jsonplaceholder.typicode.com/,
+// API USADA para validação dos Cenários de Testes - https://jsonplaceholder.typicode.com/,
 
 // Valida se o status da response é 200 Teste Positivo
 pm.test("Status code is 200", function () {
@@ -21,7 +21,7 @@ pm.test("Status code is 500", function () {
 });
 
 
-// Valida Se existem 100 posts na response Teste Negativo
+// Valida Se existem 100 posts na response Teste Positivo
 pm.test("Response length is 100", function () {
     pm.response.length == 100;
 });
