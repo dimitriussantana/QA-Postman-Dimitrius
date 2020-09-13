@@ -1,0 +1,64 @@
+// API USADA para validação  https://jsonplaceholder.typicode.com/,
+
+// Valida se o status da response é 200 Teste Positivo
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+// Valida Se o status da response é 404 Teste Negativo
+pm.test("Status code is 404", function () {
+    pm.response.to.have.status(404);
+});
+
+// Valida Se o status da response é 400 Teste Negativo
+pm.test("Status code is 400", function () {
+    pm.response.to.have.status(400);
+});
+
+// Valida Se o status da response é 500 Teste Negativo
+pm.test("Status code is 500", function () {
+    pm.response.to.have.status(500);
+});
+
+
+// Valida Se existem 100 posts na response Teste Negativo
+pm.test("Response length is 100", function () {
+    pm.response.length == 100;
+});
+
+
+//Valida o body do post 1 - Teste Positivo
+pm.test('Validating body of postId=1', function () {
+    for(var post in pm.response.json()){
+        if(post.userId == 1){
+            if(post.body == 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'){
+                return true;
+            }
+            return false;
+        }
+    }
+    return false;
+});
+
+//Valida o title do post 20 -Teste Positivo
+pm.test('Validating title of postId=20', function () {
+    for(var post in pm.response.json()){
+        if(post.userId == 20){
+            if(post.title == 'asperiores ea ipsam voluptatibus modi minima quia sint'){
+                return true;
+            }
+            return false;
+        }
+    }
+    return false;
+});
+
+--------
+//Exemplo de Arquivo de configuraçao 
+
+Criado - tests-enviroment  Adicionado Variavel tests-url  ---->  https://jsonplaceholder.typicode.com/
+
+Exemplo:  --- > {{tests-url}}/posts
+
+
+
