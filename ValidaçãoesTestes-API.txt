@@ -54,7 +54,7 @@ pm.test('Validating title of postId=20', function () {
 });
 
 --------
-//Exemplo de Arquivo de configuraçao 
+//Exemplo de Arquivo de configuraçao criado
 
 Criado - tests-enviroment  Adicionado Variavel tests-url  ---->  https://jsonplaceholder.typicode.com/
 
